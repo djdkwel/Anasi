@@ -1,27 +1,14 @@
-"""def findMinWeeks(x, a, b):
-    count = 0
-    c=1
-    totalA=x
-    totalB=1
-    while totalA>totalB:
-        c*=b
-        totalB+=c
-        count+=1
-        print(totalA)
-        print(totalB)
-    return count """
 def findMinWeeks(x, a, b):
-    count = 0
+    week = 0
     c=1
-    totalA=0
-    totalB=0
-    while totalA>=totalB:
-        totalA+=x
+    bossPay=0
+    anasiPay=0
+    while(1):
+        bossPay+=x
         x+=a
-        totalB+=c
+        anasiPay+=c
         c*=b
-        #totalB+=c
-        count+=1
-        print(totalA)
-        print(totalB)
-    return count
+        week+=1
+        if(bossPay<anasiPay):
+            break
+    return week
